@@ -1,0 +1,168 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    height: 80px;
+    background: rgb(240, 240, 56);
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.header__div {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header p {
+    padding: 10px 40px;
+    color: rgb(0, 0, 0);
+    font-size: 26px;
+    font-family: Arial black;
+}
+
+.header__image{
+    margin-top: 10px;
+    height: 60px;
+}
+
+.nav {
+    margin: 10px;
+    height: 60px;
+    border-radius: 10px;
+    background: rgb(236, 236, 109);
+}
+
+.nav__ul {
+    padding: 0;
+    height: 100%;
+    margin: 0;
+    display: flex;  /* Para activar Flexbox */
+    flex-direction: row;  /* Para que la lista aparezca en fila */
+    justify-content: space-around;  /* Para un espaciado igual a todos */
+    align-items: center;  /* Alinea los items al centro del espacio */ 
+    list-style: none;  /* Saca el punto del item de lista */
+}
+
+.nav__ul a {
+    padding: 6px 24px;
+    border-radius: 12px;
+    text-decoration: none;  /* Saca a linea debajo del item de lista */
+    color: rgb(224, 120, 1);
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav__ul a:hover {
+    background: rgb(240, 240, 143);
+    /* text-decoration: underline;  Coloca a linea debajo del item de lista al hacer hover */
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section__contacto{
+    margin: 0px;
+    padding: 16px 8px;
+}
+
+.section__article--inicio {
+    width: 94%;
+    height: 1200px;
+    border-radius: 20px;
+    margin: 20px;
+    background: rgb(233, 233, 150);
+}
+
+.section__article--inicio p {
+    padding: 40px 30px;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.section__image--camionLateral {
+    margin: 1% 10%;
+    padding: 6px 40px;
+    height: 15%;
+}
+
+.section__image--taller {
+    margin: 1% 10%;
+    padding: 6px 40px;
+    height: 20%;
+}
+
+.section__contacto--article {
+    padding: 30px 50px;
+    width: 84%;
+    height: 800px;
+    border-radius: 20px;
+    margin: 20px;
+    background: rgb(233, 233, 150);
+}
+
+.section__contacto--article p {
+    margin: 0px;
+    padding: 16px 8px;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.section__article {
+    width: 94%;
+    height: 400px;
+    border-radius: 20px;
+    margin: 20px;
+    background: rgb(233, 233, 150);
+}
+
+.section__article p {
+    padding: 40px 30px;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer {
+    height: 220px;
+    background: rgb(240, 240, 56);
+    color: rgb(224, 120, 1);
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__image {
+    padding: 6px;
+    height: 40px;
+}
+
+.footer__image--camion {
+    padding: 6px 40px;
+    height: 70px;
+}
+
+.footer p {
+    margin: 0px;
+    padding: 14px 12px;
+    color: rgb(224, 120, 1);
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer__article {
+    margin: 0px;
+    padding: 0px 50px;
+}
+
+.footer__article--section {
+    display: flex;
+    flex-direction: row;
+}
