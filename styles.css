@@ -1,11 +1,17 @@
 body {
     margin: 0;
     padding: 0;
+    background: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .header {
+    width: 100%;
     height: 80px;
-    background: rgb(240, 240, 56);
+    background: #f6ec66;
     display: flex;
     justify-content: center;
     /* align-items: center; */
@@ -20,20 +26,21 @@ body {
 .header p {
     padding: 10px 40px;
     color: rgb(0, 0, 0);
-    font-size: 26px;
-    font-family: Arial black;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.header__image{
+.header__image {
     margin-top: 10px;
     height: 60px;
+    /* overflow: hidden; */
 }
 
 .nav {
     margin: 10px;
     height: 60px;
     border-radius: 10px;
-    background: rgb(236, 236, 109);
+    /* background: rgb(236, 236, 109); */
 }
 
 .nav__ul {
@@ -43,7 +50,7 @@ body {
     display: flex;  /* Para activar Flexbox */
     flex-direction: row;  /* Para que la lista aparezca en fila */
     justify-content: space-around;  /* Para un espaciado igual a todos */
-    align-items: center;  /* Alinea los items al centro del espacio */ 
+    align-items: center;  /* Alinea los items al centro del espacio */
     list-style: none;  /* Saca el punto del item de lista */
 }
 
@@ -51,19 +58,27 @@ body {
     padding: 6px 24px;
     border-radius: 12px;
     text-decoration: none;  /* Saca a linea debajo del item de lista */
-    color: rgb(224, 120, 1);
-    font-size: 30px;
+    color: #f65454;
+    font-size: 24px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .nav__ul a:hover {
-    background: rgb(240, 240, 143);
+    background: #fadc6d;
     /* text-decoration: underline;  Coloca a linea debajo del item de lista al hacer hover */
 }
 
+.hero__image {
+    width: 90vw;
+    /* padding: 6px 40px;
+    height: 15%; */
+}
+
 .section {
+    width: 90%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -73,28 +88,49 @@ body {
 }
 
 .section__article--inicio {
-    width: 94%;
-    height: 1200px;
-    border-radius: 20px;
-    margin: 20px;
-    background: rgb(233, 233, 150);
+    border: 2px solid red;
+    width: 46%;
+    /* height: 600px; */
+    /* border-radius: 20px; */
+    /* padding: 20px; */
+    background: #ffffff;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: ; */
+}
+
+.section__article--figure {
+    border: 2px solid red;
+    margin: 0%;
+    width: 700px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.section__article--img {
+    margin: 0%;
+    /* border: 2px solid red; */
+    width: 800px;
+    height: 400px;
 }
 
 .section__article--inicio p {
-    padding: 40px 30px;
-    font-size: 24px;
+    margin: 0%;
+    padding: 10px 16px;
+    font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.section__image--camionLateral {
-    margin: 1% 10%;
-    padding: 6px 40px;
-    height: 15%;
-}
-
 .section__image--taller {
-    margin: 1% 10%;
-    padding: 6px 40px;
+    /* margin: 1% 10%;
+    padding: 6px 40px; */
     height: 20%;
 }
 
@@ -115,7 +151,7 @@ body {
 }
 
 .section__article {
-    width: 94%;
+    width: 90%;
     height: 400px;
     border-radius: 20px;
     margin: 20px;
@@ -124,45 +160,106 @@ body {
 
 .section__article p {
     padding: 40px 30px;
-    font-size: 24px;
+    font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.footer {
-    height: 220px;
-    background: rgb(240, 240, 56);
-    color: rgb(224, 120, 1);
+.contact__div {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
+    font-weight: 900;
+    color: #f65454;
+}
+
+.footer {
+    width: 100%;
+    /* height: 220px; */
+    background: #f6ec66;
+    color: #f65454;
+    font-size: 18px;
+    font-weight: 700;
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.footer__image {
-    padding: 6px;
-    height: 40px;
+.footer__div {
+    width: 90%;
+    padding: 50px 0px;
+    display: flex;
+    justify-content: space-around;
 }
 
-.footer__image--camion {
-    padding: 6px 40px;
+.footer__article {
+    margin: 0px;
+    padding: 30px 50px;
+    box-sizing: border-box;
+}
+
+.footer__article--figure {
+    margin: 10px 0px;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__article--image {
+    /* padding: 6px; */
+    height: 44px;
+}
+
+.footer__article--image:hover {
+    /* padding: 2px; */
+    height: 48px;
+}
+
+.footer__logo {
+    padding: auto;
+}
+
+.footer__logo--truck {
+    margin: 40px 0;
     height: 70px;
+    /* display: flex;
+    justify-content: center; */
 }
 
 .footer p {
     margin: 0px;
     padding: 14px 12px;
-    color: rgb(224, 120, 1);
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.footer__article {
-    margin: 0px;
-    padding: 0px 50px;
+    color: #f65454;
+    text-align: center;
+    line-height: 36px;
+    /* font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif; */
 }
 
 .footer__article--section {
+    /* padding: 12px 0px; */
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
+    align-items: center;
+    justify-content: space-between;
+}
+
+.design {
+    width: 100%;
+    /* margin: 0%;
+    padding: 4px; */
+    background: #f65454;
+    display: flex;
+    justify-content: center;
+}
+
+.design__container {
+    width: 90%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 24Bpx;
+    text-align: center;
+    color: #f6ec66;
 }
