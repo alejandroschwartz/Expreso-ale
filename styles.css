@@ -8,6 +8,33 @@ body {
     justify-content: center;
 }
 
+.icon {
+    width: 100%;
+    display: flex;
+}
+
+.icon__menu {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid #000000;
+    background: rgba(224, 224, 224, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+    /* overflow: hidden; */
+    position: fixed;
+    z-index: 10;
+    left: 8px;
+    top: 8px;
+}
+
+.icon__menu img {
+    width: 20px;
+    height: 20px;
+}
+
 .header {
     width: 100%;
     height: 80px;
@@ -33,7 +60,12 @@ body {
 .header__image {
     margin-top: 10px;
     height: 60px;
-    /* overflow: hidden; */
+    overflow: hidden;
+}
+
+.header__image img {
+    height: 60px;
+    /* object-fit: cover; */
 }
 
 .nav {
@@ -88,7 +120,7 @@ body {
 }
 
 .section__article--inicio {
-    border: 2px solid red;
+    /* border: 2px solid red; */
     width: 46%;
     /* height: 600px; */
     /* border-radius: 20px; */
@@ -103,7 +135,7 @@ body {
 }
 
 .section__article--figure {
-    border: 2px solid red;
+    /* border: 2px solid red; */
     margin: 0%;
     width: 700px;
     height: 400px;
@@ -219,6 +251,8 @@ body {
 
 .footer__logo {
     padding: auto;
+    display: flex;
+    justify-content: center;
 }
 
 .footer__logo--truck {
@@ -262,4 +296,139 @@ body {
     line-height: 24Bpx;
     text-align: center;
     color: #f6ec66;
+}
+
+
+@media only screen and (max-width: 479px) {
+    .icon__menu {
+        display: flex;
+    }
+
+    .header__div {
+        justify-content: center;
+    }
+
+    .nav__ul {
+        position: fixed;
+        background-color: rgba(5, 111, 255, 0.8);
+        z-index: 3;
+        top: 0;
+        left: -100vw;  /* Para que el menu se oculte a la izquierda y se cree el efecto al hacer click*/
+        width: 100vw;
+        bottom: 0;  /* height: 100vw; */ /*A partir de aqui para centrar*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;  /* centrar hasta aqui */
+        transition: .3s;  /* Para crear efecto de transición */
+    }
+
+    .nav__ul.is-active {
+        left: 0;
+    }
+
+    .nav__ul--li {
+        margin: 14px;
+        width: 260px;
+        border: 2px solid #ffffff;
+        border-radius: 10px;
+        text-align: center;
+    }
+    
+    .nav__ul--li a {
+        color: #ffffff;
+    }
+
+    .nav__ul--li a:hover {
+        background: none;
+    }
+
+    .section {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .section__article--inicio {
+        width: 90vw;
+    }
+
+    .section__article--inicio p {
+        font-size: 14px;
+    }
+
+    .footer__div {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .footer__article--section {
+        justify-content: space-around;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .icon__menu {
+        display: flex;
+    }
+
+    .header__div {
+        justify-content: center;
+    }
+
+    .nav__ul {
+        position: fixed;
+        background-color: rgba(5, 111, 255, 0.8);
+        z-index: 3;
+        top: 0;
+        left: -100vw;  /* Para que el menu se oculte a la izquierda y se cree el efecto al hacer click*/
+        width: 100vw;
+        bottom: 0;  /* height: 100vw; */ /*A partir de aqui para centrar*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;  /* centrar hasta aqui */
+        transition: .3s;  /* Para crear efecto de transición */
+    }
+
+    .nav__ul.is-active {
+        left: 0;
+    }
+
+    .nav__ul--li {
+        margin: 14px;
+        width: 260px;
+        border: 2px solid #ffffff;
+        border-radius: 10px;
+        text-align: center;
+    }
+    
+    .nav__ul--li a {
+        color: #ffffff;
+    }
+
+    .nav__ul--li a:hover {
+        background: none;
+    }
+
+    .section {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .section__article--inicio {
+        width: 90vw;
+    }
+
+    .section__article--inicio p {
+        font-size: 14px;
+    }
+
+    .footer__div {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .footer__article--section {
+        justify-content: space-around;
+    }
 }

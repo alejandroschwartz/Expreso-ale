@@ -7,15 +7,22 @@
     <title>Transporte Ale</title>
 </head>
 <body>
+    <div class="icon" >
+        <i class="icon__menu" id="burger-menu" >
+            <img src="images/burger-buttom.png" alt="">
+        </i>
+    </div>
     <header class="header">
         <div class="header__div">
-            <img class="header__image" src="https://i.imgur.com/xNdvKc4.png" />
+            <figure class="header__image">
+                <img src="https://i.imgur.com/xNdvKc4.png" />
+            </figure>
             <nav class="nav">
-                <ul class="nav__ul">
-                    <li class="nav__ul--inicio"><a href="#"> Inicio </a></li>
-                    <li class="nav__ul--producto"><a href="#servicios"> Servicios </a></li>
-                    <li class="nav__ul--institucional"><a href="#institucional"> Institucional </a></li>
-                    <li class="nav__ul--contacto"><a href="#contacto"> Contacto </a></li>
+                <ul class="nav__ul" >
+                    <li class="nav__ul--li"><a href="#"> Inicio </a></li>
+                    <li class="nav__ul--li"><a href="#servicios"> Servicios </a></li>
+                    <li class="nav__ul--li"><a href="#institucional"> Institucional </a></li>
+                    <li class="nav__ul--li"><a href="#contacto"> Contacto </a></li>
                 </ul>
             </nav>
         </div>
@@ -118,5 +125,21 @@
             <p>Diseñado por: <strong>Alejandro Schwartz</strong> <br /> Cel: +54 0351 3022392 <br /> Ciudad de Córdoba - Argentina </p>
         </div>
     </div>
+    <script>
+        const menu = document.querySelector(".nav__ul");
+        const burgerButton = document.querySelector("#burger-menu");
+        burgerButton.addEventListener("click", showHide);
+
+        console.log(menu);
+        console.log(burgerButton);
+
+        function showHide() {
+            if (menu.classList.contains("is-active")) {
+                menu.classList.remove("is-active");
+            } else {
+                menu.classList.add("is-active");
+            }
+        }
+    </script>
 </body>
 </html>
